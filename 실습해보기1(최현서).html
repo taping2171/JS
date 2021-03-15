@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> for문을 이용한 별 찍기 </title>
+<script>
+    var num = prompt("*을 입력할 라인의 수를 입력하시요", 0)
+    var star = "*"
+    //순서대로
+    for(var i=0; i<num; i++){
+        var result = "";
+        for(var j=0; j<=i; j++){
+            result += star;
+        }
+        console.log(result);
+    }
+    //거꾸로
+    for(var i=0; i<num; i++){
+        var result = "";
+        for(var j=0; j<num-i; j++){
+            result += star;
+        }
+        console.log(result);
+    }
+</script>
+</head>
+<body>
+</body>
+</html>

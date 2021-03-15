@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ex04-제어문으로 구구단 출력하기</title>
+</head>
+<body>
+	<h3>구구단 출력하기</h3>
+	<hr>
+	<script>
+		// var num = prompt("몇단을 출력할까요?(숫자만 입력해주세요)", 0)
+		// if(num>0 && num<10){
+		// 	for(var i=1; i <= 9; i++){
+		// 		document.write(num + " X " + i + " = " + (num*i))
+		// 		document.write("<br>")
+		// 	}
+		// }else {
+		// 	alert("잘못했습니다.")
+		// 	location.reload
+		// }
+		var num = prompt("몇단을 출력할까요?(숫자만 입력해주세요)", 0)
+		var i = 0;
+		if(num>0 && num<10){
+			while(i<=9) {
+				i++
+				document.write(num + " X " + i + " = " + (num*i))
+				document.write("<br>")
+			}
+		}else{
+			alert("잘못했습니다.")
+			location.reload
+		}
+	</script>
+</body>
+</html>
