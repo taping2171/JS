@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쯔쌰ㅡㅉ쌰ㅡㅉ쌰ㅡ쨔ㅡ쌰ㅡㅉ쓰ㅑ</title>
+        <h3>결과 :</h3>
+        메세지: <input type="text" id="내용">
+        <input type="button" id="버튼" value="전송" />
+        <h4 id="ms">메세지의 결과</h4>
+    </head>
+
+<body>
+    <script>
+        let MS = document.getElementById('ms')
+        let BT = document.getElementById('버튼')
+        let 출력내용 = document.getElementById('내용').value
+        BT.addEventListener('click', function (){
+            let 출력내용 = document.getElementById("내용").value
+            MS.innerHTML += '<br>'
+            MS.innerHTML += 출력내용
+
+        })
+
+    </script>
+</body>
+</html>
