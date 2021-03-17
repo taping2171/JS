@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쨔쓰쨔쓰쨔쓰공부</title>
+</head>
+<body>
+    <script>
+        var id = "Jsking"
+        var password = "1234"
+	var userid = prompt("아이디는??", "ABC");
+    var userpassword = prompt("비밀번호는??", "DEF");
+	if(id == userid){
+        if(password == userpassword){
+            document.write(id + "님 방문을 환영합니다" );
+        } else {
+            alert("존재하지 않는 아이디 입니다.");
+            location.reload();
+        }
+        } else {
+            alert("잘못된 비밀번호 입니다.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>
