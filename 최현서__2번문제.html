@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쨔쓰쨔쓰쨔ㅡㅆ쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰쨔쓰ㅉ쌰쯔쌰ㅉ쓰쨔쓰쨔ㅡ쌰쯨쨔쓰쨔쓰쨔쓰</title>
+</head>
+<style>
+    .container{
+    overflow: hidden;
+    text-align: center;
+    }
+    .img{
+    width: 50%;
+    }
+
+    .bt{
+    text-align: center;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <img class="img" src="./images/img1.jpg">
+        <div class="bt">
+            <button class="previous">이전</button>
+            <span class="picNo">1</span>
+            <button class="next">다음</button>
+        </div>
+    </div>
+    <script>
+        let pic = ["./images/img1.jpg" , "./images/img2.jpg" , "./images/img3.jpg" , "./images/img4.jpg" , "./images/img5.jpg" , "./images/img6.jpg"];
+        let pre = document.querySelector('.previous');
+        let nxt =  document.querySelector('.next');
+        let picNo = document.querySelector('.picNo');
+        let img = document.querySelector('.img');
+        let i = 0;
+
+        nxt.addEventListener('click', function(){
+            if(i<6){
+                if (i == 5) {
+                    return;
+                }
+                i++;
+            }
+            img.setAttribute("src", pic[i]);
+            picNo.innerHTML = i+1; //2
+            //pic.setAttribute("속성", "이미지명")
+        });
+
+        pre.addEventListener('click', function(){
+            if(i<6){
+                if (i == 0)
+                    return;
+                i--;
+            }
+            img.setAttribute("src", pic[i]);
+            picNo.innerHTML = i+1;
+        });
+
+    </script>
+</body>
+</html>
