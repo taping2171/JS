@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            border-radius: 10000px;
+            transition: 1s;
+        }
+
+        .text_box{
+            width: 250px;
+            height: 150px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            color: red;
+            transition: 2s;
+        }
+        .text_box:hover{
+            width: 500px;
+            height: 300px;
+            font-size: 64px;
+            background-color: red;
+            color: white;
+        }
+
+        .text{
+            margin: 0 auto;
+            font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="text_box">
+    <p class="text">START</p>
+    </div>
+    <script>
+        document.addEventListener("click", function(event){
+            // let text = document.getElementsByClassName("text")[0];
+            let box = document.getElementsByClassName("box")[0];
+            let x = event.clientX;
+            let y = event.clientY;
+
+            // text.textContent = "x: "+x+" y: " + y;
+
+            box.style.left = x +"px";
+            box.style.top = y + "px";
+        })
+
+    </script>
+</body>
+</html>
