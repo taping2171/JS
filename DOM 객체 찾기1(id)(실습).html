@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML과의 연계</title>
+<script type="text/javascript">
+	function selectById() {
+		// 'aaa'라는 아이디를 가진 엘리먼트를 가져온다.
+		let a = document.getElementById("aaa");
+
+		// 엘리먼트의 스타일 속성의 색상을 red로 설정한다.
+		a.style.backgroundColor = "red";
+	}
+</script>
+</head>
+<body>
+	<button onclick="selectById();">id가 'aaa'인 객체 선택하기</button>
+	<div>
+		<span name="bbb">1번</span>
+		<span>2번</span>
+		<span id="aaa">3번</span>
+		<span>4번</span>
+		<span name="bbb">5번</span>
+		<span>6번</span>
+	</div>
+</body>
+</html>

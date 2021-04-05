@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML과의 연계</title>
+<script type="text/javascript">
+	function selectByName() {
+		//name속성에 'bbb'라는 값을 가지고 있는 객체들을 선택해 배열로 저장한다.
+		var c = document.getElementsByName("bbb");
+		
+		//배열에서 선택된 객체에 스타일 속성의 색상을 red로 설정한다.
+		for(var i = 0; i<c.length; i++){
+			var cc = c[i]
+			cc.style.backgroundColor = "red";
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick="selectByName();"> name이 'bbb' 인 객체 선택하기</button>
+	<div>
+		<span name="bbb">1번</span>
+		<span>2번</span>
+		<span id="aaa">3번</span>
+		<span>4번</span>
+		<span name="bbb">5번</span>
+		<span>6번</span>
+	</div>
+</body>
+</html>

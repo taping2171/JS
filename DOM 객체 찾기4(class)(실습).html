@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML과의 연계</title>
+<script type="text/javascript">
+	function selectByClassName() {
+		//class속성에 'bbb'라는 값을 가지고 있는 객체들을 선택해 배열로 저장한다.
+		let e =document.getElementsByClassName('bbb');
+		
+		//배열에서 선택된 객체에 스타일 속성의 색상을 red로 설정한다.
+		for(var i = 0; i<e.length; i++){
+			var ee = e[i]
+			ee.style.backgroundColor = "red";
+		}
+	}
+
+</script>
+</head>
+<body>
+	<button onclick="selectByClassName();"> class가 'bbb' 인 객체 선택하기</button>	
+	<div>
+		<span class="bbb">1번</span>
+		<span>2번</span>
+		<span id="aaa">3번</span>
+		<span>4번</span>
+		<span class="bbb">5번</span>
+		<span>6번</span>
+	</div>
+</body>
+</html>

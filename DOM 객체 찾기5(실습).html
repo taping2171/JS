@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function selectByCssSelector() {
+		//사용자에게 CSS 선택자를 입력받는다.
+		var a = prompt("CSS 선택자를 입력해주세요.")
+		//입력받은 선택자로 조건에 맞는 하나의 객체를 검색해온다.
+		let aa = document.querySelector(a);
+
+
+		//선택된 객체에 스타일 속성을 설정한다.
+		aa.style.backgroundColor = "red";
+		document.getElementById("selected").innerHTML = "선택된 CSS는 " + a + "입니다.";
+	}
+	
+	function selectByCssSelectorAll() {
+		//사용자에게 CSS 선택자를 입력받는다.
+		var b = prompt("CSS 선택자를 입력헤주세요.")
+
+		//입력받은 선택자로 조건에 맞는 모든 객체를 검색해 배열로 저장한다.
+		let bb = document.querySelectorAll(b);
+		
+        //배열에서 선택된 객체에 스타일 속성을 설정한다.
+		for(let i = 0; i<bb.length; i++){
+			bb[i].style.border = "1px solid black";
+			
+		}
+		document.getElementById("selected").innerHTML = "선택된 css는 " + b + "입니다.";
+	}
+</script>
+</head>
+<body>
+	<button onclick="selectByCssSelector();">CSS 선택자로 하나만 선택하기</button>
+	<button onclick="selectByCssSelectorAll();">CSS 선택자로 전체 선택하기</button>
+	<p id="selected"></p>
+	<div>
+		<span class="bbb">1번</span>
+		<span>2번</span>
+		<span id="aaa">3번</span>
+		<span>4번</span>
+		<span class="bbb">5번</span>
+		<span>6번</span>
+	</div>
+</body>
+</html>
