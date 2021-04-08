@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>add_Element</title>
+</head>
+<body>
+    <p>버튼을 클릭하면 h1 스타일로 텍스트가 출력됩니다.</p>
+    <button onclick="myFunction()">Click</button>
+    <script>
+        function myFunction() {
+            // h1 태그 텍스트 생성
+            let header = document.createElement("h1");
+            // 생성된 h1 태그에 "Hello Wrold" 문구 삽입하기
+            let textNode= document.createTextNode("Hello Wrold");
+            
+            // 생성된 태그 출력하기
+            header.appendChild(textNode)
+            document.body.appendChild(header)
+        }
+    </script>
+</body>
+</html>
