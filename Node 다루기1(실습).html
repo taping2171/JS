@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Element</title>
+<script type="text/javascript">
+
+let n;
+let n1;
+	window.onload = function(){
+		n = document.getElementById("container");
+		n1 = document.getElementById("targetDiv");
+	}
+	function b(element){
+		if(element.parentNode.id == "container"){
+			element.parentNode.removeChild(element);
+			n1.appendChild(element);
+		}else{
+			element.parentNode.removeChild(element);
+			n.appendChild(element);
+		}
+	}
+
+</script>
+</head>
+<body>
+	<div id="container" style="border: 5px solid black; height: 100px;">
+		<!-- 버튼 3개 생성 -->
+		<button onclick="b(this)">1번</button>
+		<button onclick="b(this)">2번</button>
+		<button onclick="b(this)">3번</button>
+	</div>
+	<div id="targetDiv" style="border: 1px solid black; height: 100px;"></div>
+</body>
+</html>
