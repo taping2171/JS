@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습해보기8</title>
+</head>
+
+<body>
+    <script>
+        function drawImage() {
+            let f = document.getElementById("frt");
+			let i = document.getElementById("myImg");
+
+            let index = f.selectedIndex;
+
+            i.src = f.options[index].value;
+        }
+    </script>
+    </head>
+
+    <body onload="drawImage()">
+        <h3>select 객체에서 선택한 과일 출력</h3>
+        <hr>
+        <p>과일을 선택하면 이미지가 출력됩니다.</p>
+        <form>
+        <p><img id="myImg" src="./img/banana.png" alt="."></p>
+        <select id="frt" onchange="drawImage()">
+            <option value="img/banana.png" selected>바나나</option>
+            <option value="img/apple.png">사과</option>
+            <option value="img/Tulips.png">튤립</option>
+            <option value="img/mango.png">망고</option>
+        </select>
+        </form> 
+    </body>
+</html>
